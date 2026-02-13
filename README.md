@@ -47,14 +47,6 @@ git clone PASTE_THE_HTTPS_URL_HERE
 cd repo-folder-name
 ```
 
-Open in VS Code:
-
-```bash
-code .
-```
-
-(If `code` does not work, open VS Code manually and open the folder.)
-
 ---
 
 # 2. Pulling the Latest Changes (Before Starting Work)
@@ -89,7 +81,127 @@ Use these commands frequently.
 
 ---
 
-# 4. Creating a New Branch (Recommended Workflow)
+# 4. Creating Files and Folders (Without Using GUI)
+
+For a seamless terminal-based workflow, use the following commands.
+
+---
+
+## Creating a Folder
+
+### Windows (CMD / PowerShell)
+```bash
+mkdir FolderName
+```
+
+### macOS / Linux (Unix)
+```bash
+mkdir FolderName
+```
+
+Create nested folders:
+
+```bash
+mkdir FolderName/SubFolderName
+```
+
+---
+
+## Creating a New File
+
+### Windows (CMD)
+```bash
+type nul > filename.txt
+```
+
+### Windows (PowerShell)
+```bash
+New-Item filename.txt
+```
+
+### macOS / Linux (Unix)
+```bash
+touch filename.txt
+```
+
+---
+
+## Creating a File Inside a Specific Folder
+
+### Windows
+```bash
+type nul > FolderName\filename.py
+```
+
+### macOS / Linux
+```bash
+touch FolderName/filename.py
+```
+
+---
+
+## Renaming a File
+
+### Windows
+```bash
+rename oldname.txt newname.txt
+```
+
+### macOS / Linux
+```bash
+mv oldname.txt newname.txt
+```
+
+---
+
+## Moving a File to Another Folder
+
+### Windows
+```bash
+move filename.txt FolderName\
+```
+
+### macOS / Linux
+```bash
+mv filename.txt FolderName/
+```
+
+---
+
+## Deleting a File
+
+### Windows
+```bash
+del filename.txt
+```
+
+### macOS / Linux
+```bash
+rm filename.txt
+```
+
+---
+
+## Deleting a Folder
+
+### Windows
+```bash
+rmdir FolderName
+```
+
+Delete non-empty folder:
+```bash
+rmdir /s FolderName
+```
+
+### macOS / Linux
+```bash
+rm -r FolderName
+```
+
+---
+
+# 5. Creating a New Branch (Recommended Workflow)
 
 🚫 Do NOT work directly on `main` unless instructed.
 
@@ -110,7 +222,7 @@ Include your name for accountability and clarity.
 
 ---
 
-# 5. Saving Changes (Add + Commit)
+# 6. Saving Changes (Add + Commit)
 
 ## Stage Changes
 
@@ -142,7 +254,7 @@ Use clear and professional messages.
 
 ---
 
-# 6. Pushing Changes to GitHub
+# 7. Pushing Changes to GitHub
 
 ## First Push of a New Branch
 
@@ -158,7 +270,7 @@ git push
 
 ---
 
-# 7. Opening a Pull Request (PR)
+# 8. Opening a Pull Request (PR)
 
 1. Go to the repository on GitHub.
 2. Click **Compare & pull request**.
@@ -168,7 +280,7 @@ git push
 
 ---
 
-# 8. Syncing Your Branch with `main`
+# 9. Syncing Your Branch with `main`
 
 Before pushing large changes:
 
@@ -183,47 +295,32 @@ If conflicts appear, resolve them before pushing.
 
 ---
 
-# 9. Common Recovery Commands
+# 10. Common Recovery Commands
 
 ## Discard Uncommitted Changes
-
 ```bash
 git reset --hard
 ```
 
----
-
 ## Unstage Files
-
 ```bash
 git reset
 ```
 
----
-
 ## Amend Commit Message (If Not Pushed Yet)
-
 ```bash
 git commit --amend -m "Improved commit message"
 ```
 
----
-
 ## View and Switch Branches
-
-List branches:
 ```bash
 git branch
-```
-
-Switch branches:
-```bash
 git checkout branch-name
 ```
 
 ---
 
-# 10. Standard Daily Workflow
+# 11. Standard Daily Workflow
 
 Follow this process every time:
 
@@ -261,6 +358,7 @@ git push
 - Write meaningful commit messages
 - Always open a PR before merging
 - Keep communication clear within the team
+- Prefer terminal-based file management for consistency across environments
 
 ---
 
